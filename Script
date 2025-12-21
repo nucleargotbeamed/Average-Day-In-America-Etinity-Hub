@@ -1,5 +1,5 @@
 
-local ALLOWED_PLACE_ID = 7072382433
+local ALLOWED_PLACE_ID = 126915360024106
 
 if game.PlaceId ~= ALLOWED_PLACE_ID then
     game:GetService("Players").LocalPlayer:Kick("\n\n This script is not allowed in this game.\n\nPlace ID: " .. tostring(game.PlaceId))
