@@ -1,9 +1,12 @@
-local ALLOWED_GAME_ID = 126915360024106
 
-if game.GameId ~= ALLOWED_GAME_ID then
-    game:GetService("Players").LocalPlayer:Kick("\n\n This script is not allowed in this game.\n\nGame ID: " .. tostring(game.GameId))
+local ALLOWED_PLACE_ID = 7072382433
+
+if game.PlaceId ~= ALLOWED_PLACE_ID then
+    game:GetService("Players").LocalPlayer:Kick("\n\n This script is not allowed in this game.\n\nPlace ID: " .. tostring(game.PlaceId))
     return
 end
+
+print("[Lock] Place ID verified!")
 
 
 -- This file was protected using Luraph Obfuscator v14.4.2 [https://lura.ph/]
