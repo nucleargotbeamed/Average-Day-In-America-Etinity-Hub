@@ -1,5 +1,4 @@
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
+local player = game.Players.LocalPlayer
 
 local allowed = 126915360024106
 
