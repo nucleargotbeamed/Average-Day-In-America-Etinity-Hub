@@ -2699,7 +2699,6 @@ do
 	}}})
 	window:_setActiveTab(8)
 end
-
 do
 	local _skeet_font = getgenv().mangosense_font or Font.fromId(12187371840)
 	local _skeet_font_bold = getgenv().mangosense_font_bold or Font.fromId(12187371840, Enum.FontWeight.Bold)
@@ -2721,7 +2720,7 @@ do
 
 	local KBL_List = newObject("Frame", {Name = "listframe", BackgroundTransparency = 1, BorderSizePixel = 0, Position = udim2new(0,0,0,4), Size = udim2new(1,0,0,0), AutomaticSize = Enum.AutomaticSize.Y, ZIndex = 55, Parent = KBL_Inner})
 
-	newObject("UIListLayout", {Padding = UDim.new(0,0), FillDirection = Enum.FillDirection.Vertical, HorizontalAlignment = Enum.HorizontalAlignment.Center, VerticalAlignment = Enum.VerticalAlignment.Top, SortOrder = Enum.SortOrder.LayoutOrder, Parent = KBL_List})
+	local KBL_Layout = newObject("UIListLayout", {Padding = UDim.new(0,0), FillDirection = Enum.FillDirection.Vertical, HorizontalAlignment = Enum.HorizontalAlignment.Center, VerticalAlignment = Enum.VerticalAlignment.Top, SortOrder = Enum.SortOrder.LayoutOrder, Parent = KBL_List})
 
 	newObject("UIPadding", {PaddingBottom = UDim.new(0,6), PaddingLeft = UDim.new(0,12), PaddingRight = UDim.new(0,8), Parent = KBL_List})
 	newObject("TextLabel", {AnchorPoint = vector2new(0,0), BackgroundTransparency = 1, BorderSizePixel = 0, LayoutOrder = -1, Position = udim2new(0,0,0,0), Size = udim2new(1,0,0,20), ZIndex = 56, FontFace = _skeet_font_bold, RichText = false, Text = "Keybinds", TextColor3 = colorfromrgb(198,198,198), TextSize = 13, TextStrokeTransparency = 1, TextXAlignment = Enum.TextXAlignment.Center, Parent = KBL_List})
