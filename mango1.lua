@@ -41,6 +41,31 @@ LPH_NO_VIRTUALIZE(function()
 	end
 end)()
 
+local signal = {}
+signal.__index = signal
+
+function signal.new()
+	return setmetatable({connections = {}}, signal)
+end
+
+function signal:Fire(...)
+	for _, callback in self.connections do
+		spawn(callback, ...)
+	end
+end
+
+function signal:Connect(callback)
+	local connection = {}
+	local connections = self.connections
+	local index = #connections + 1
+	connections[index] = callback
+	function connection:Disconnect()
+		connections[index] = nil
+		setmetatable(connection, nil)
+	end
+	return connection
+end
+
 local uis = cloneref(game:GetService("UserInputService"))
 local getMouseLocation = uis.GetMouseLocation
 local tws = cloneref(game:GetService("TweenService"))
